@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#E0691F">
+<meta name="format-detection" content="telephone=no">
+<style>*{margin:0;padding:0;box-sizing:border-box}img{max-width:100%}</style>
+</head>
+<body>
+<title>제주도 가족여행 일정표</title>
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --paper-2: #F3EDE3;
+    --card: #FFFFFF;
+    --ink: #2A2622;
+    --ink-soft: #6B6258;
+    --ink-faint: #938A7E;
+    --line: #E7DFD2;
+    --line-strong: #D8CDBB;
+
+    --tangerine: #E0691F;
+    --tangerine-soft: #FBEADB;
+    --emerald: #0E7C63;
+    --emerald-soft: #DCEFE8;
+    --emerald-line: #A9D6C7;
+    --amber: #B07B2E;
+    --amber-soft: #F6ECD8;
+    --amber-line: #E4CE9E;
+
+    --shadow: 0 1px 2px rgba(42,38,34,.05), 0 6px 20px -12px rgba(42,38,34,.18);
+
+    --maxw: 1040px;
+    --radius: 14px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1A1714;
+      --paper-2: #221E1A;
+      --card: #232019;
+      --ink: #F0E9DE;
+      --ink-soft: #B7AD9F;
+      --ink-faint: #8A8175;
+      --line: #35302A;
+      --line-strong: #443E36;
+
+      --tangerine: #F08A44;
+      --tangerine-soft: #3A2A1B;
+      --emerald: #4FBFA0;
+      --emerald-soft: #172C27;
+      --emerald-line: #2E5449;
+      --amber: #D9AE63;
+      --amber-soft: #2E2617;
+      --amber-line: #4A3C22;
+
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #FAF7F2; --paper-2: #F3EDE3; --card: #FFFFFF;
+    --ink: #2A2622; --ink-soft: #6B6258; --ink-faint: #938A7E;
+    --line: #E7DFD2; --line-strong: #D8CDBB;
+    --tangerine: #E0691F; --tangerine-soft: #FBEADB;
+    --emerald: #0E7C63; --emerald-soft: #DCEFE8; --emerald-line: #A9D6C7;
+    --amber: #B07B2E; --amber-soft: #F6ECD8; --amber-line: #E4CE9E;
+    --shadow: 0 1px 2px rgba(42,38,34,.05), 0 6px 20px -12px rgba(42,38,34,.18);
+  }
+  :root[data-theme="dark"] {
+    --paper: #1A1714; --paper-2: #221E1A; --card: #232019;
+    --ink: #F0E9DE; --ink-soft: #B7AD9F; --ink-faint: #8A8175;
+    --line: #35302A; --line-strong: #443E36;
+    --tangerine: #F08A44; --tangerine-soft: #3A2A1B;
+    --emerald: #4FBFA0; --emerald-soft: #172C27; --emerald-line: #2E5449;
+    --amber: #D9AE63; --amber-soft: #2E2617; --amber-line: #4A3C22;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR",
+                 "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(18px, 4vw, 40px) clamp(16px, 4vw, 32px) 64px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header.hero {
+    position: relative;
+    padding: 34px clamp(20px, 4vw, 38px) 30px;
+    border-radius: var(--radius);
+    background:
+      radial-gradient(120% 140% at 88% -20%, color-mix(in srgb, var(--tangerine) 22%, transparent), transparent 60%),
+      linear-gradient(160deg, var(--paper-2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .hero .eyebrow {
+    font-size: .82rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--tangerine);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6.5vw, 3.1rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  .hero .sub {
+    margin: 12px 0 0;
+    font-size: clamp(1rem, 3vw, 1.18rem);
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .hero .meta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: .95rem;
+    color: var(--ink-soft);
+  }
+  .hero .meta b { color: var(--ink); font-weight: 700; }
+
+  /* ---------- LEGEND ---------- */
+  .legend {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+  }
+  .legend .lbl { font-size: .9rem; color: var(--ink-faint); font-weight: 600; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 12px 5px 10px;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .chip .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .chip.fixed { background: var(--emerald-soft); color: var(--emerald); border-color: var(--emerald-line); }
+  .chip.fixed .dot { background: var(--emerald); }
+  .chip.flex  { background: var(--amber-soft); color: var(--amber); border-color: var(--amber-line); }
+  .chip.flex .dot { background: var(--amber); }
+
+  /* ---------- SECTION TITLES ---------- */
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 44px 2px 16px;
+  }
+  .section-title h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -.01em;
+  }
+  .section-title .tick {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line-strong), transparent);
+    align-self: center;
+  }
+
+  /* ---------- SUMMARY CARDS ---------- */
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  /* tablet+ : balanced 2 x 2 grid for the four booking cards */
+  @media (min-width: 620px) {
+    .summary { grid-template-columns: 1fr 1fr; }
+  }
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+    box-shadow: var(--shadow);
+  }
+  .info-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-card h3 .ic { font-size: 1.15rem; }
+  .info-row {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 4px 12px;
+    padding: 7px 0;
+    border-top: 1px dashed var(--line);
+    font-size: .96rem;
+  }
+  .info-row:first-of-type { border-top: none; padding-top: 0; }
+  .info-row .k { color: var(--ink-faint); font-weight: 600; font-size: .88rem; }
+  .info-row .v { color: var(--ink); }
+  .info-row .v .flight-no,
+  .info-row .v .time { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .stay-name { font-weight: 800; font-size: 1.05rem; color: var(--tangerine); }
+
+  a.maplink {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--emerald);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .86rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--emerald) 35%, transparent);
+    padding-bottom: 1px;
+  }
+  a.maplink:hover { border-bottom-color: var(--emerald); }
+  a.maplink:focus-visible { outline: 2px solid var(--emerald); outline-offset: 3px; border-radius: 3px; }
+
+  /* ---------- TIMELINE ---------- */
+  .day {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .day-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px clamp(16px, 3vw, 22px);
+    background: linear-gradient(100deg, color-mix(in srgb, var(--tangerine) 12%, var(--card)), var(--card));
+    border-bottom: 1px solid var(--line);
+  }
+  .day-head .daynum {
+    font-size: .8rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--tangerine);
+  }
+  .day-head .date { font-size: 1.15rem; font-weight: 800; margin-top: 2px; }
+  .day-head .region {
+    font-size: .9rem;
+    color: var(--ink-soft);
+    font-weight: 600;
+    text-align: right;
+  }
+  .day-head .region .pin { color: var(--tangerine); }
+
+  .timeline { padding: 6px clamp(14px, 3vw, 20px) 14px; }
+
+  /* rail width incl. gap = time(56) + gap(14) = 70px to node center at 62px */
+  .stop {
+    display: grid;
+    grid-template-columns: 56px 14px minmax(0, 1fr);
+    align-items: start;
+    position: relative;
+  }
+  .stop .time-col {
+    grid-column: 1;
+    text-align: right;
+    padding-top: 16px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  /* the rail element is a spacer; the visible line + node are drawn absolutely */
+  .stop .rail {
+    grid-column: 2;
+    position: relative;
+    align-self: stretch;
+  }
+  .stop .body {
+    grid-column: 3;
+    min-width: 0;
+    padding: 0 0 4px;
+  }
+
+  /* vertical connecting line, centered on the rail column (x = 56 + 7 = 63px) */
+  .stop::before {
+    content: "";
+    position: absolute;
+    left: 63px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: var(--line);
+    transform: translateX(-1px);
+  }
+  .stop:first-child::before { top: 22px; }
+  .stop:last-child::before { bottom: auto; height: 22px; }
+  .node {
+    position: absolute;
+    left: 63px;
+    top: 20px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    transform: translateX(-6px);
+    border: 2px solid var(--card);
+    z-index: 2;
+  }
+  .card-stop {
+    margin: 10px 0 0;
+    padding: 12px 14px;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    background: var(--paper-2);
+  }
+  .stop.fixed .node { background: var(--emerald); box-shadow: 0 0 0 3px var(--emerald-soft); }
+  .stop.flex  .node { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-soft); }
+  .stop.fixed .card-stop { border-color: var(--emerald-line); background: color-mix(in srgb, var(--emerald-soft) 55%, var(--card)); }
+  .stop.flex  .card-stop { border-color: var(--amber-line);  background: color-mix(in srgb, var(--amber-soft) 55%, var(--card)); }
+  .stop.move .card-stop { background: var(--card); border-style: dashed; }
+  .stop.move .node { background: var(--ink-faint); box-shadow: 0 0 0 3px var(--line); }
+
+  .stop .kind {
+    font-size: .72rem;
+    letter-spacing: .06em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .stop .place {
+    font-size: 1.06rem;
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 1px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .status-tag {
+    font-size: .68rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  .status-tag.fixed { background: var(--emerald); color: #fff; }
+  .status-tag.flex  { background: var(--amber);  color: #fff; }
+  :root[data-theme="dark"] .status-tag.fixed,
+  :root[data-theme="dark"] .status-tag.flex { color: #1A1714; }
+  @media (prefers-color-scheme: dark) {
+    .status-tag.fixed, .status-tag.flex { color: #1A1714; }
+  }
+  .stop .desc {
+    margin: 5px 0 0;
+    font-size: .93rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .stop .desc .rain { color: var(--tangerine); font-weight: 700; }
+  .stop-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+
+  /* ---------- TIPS ---------- */
+  .tips {
+    margin-top: 20px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px clamp(18px, 3vw, 24px);
+    box-shadow: var(--shadow);
+  }
+  .tips h3 { margin: 0 0 14px; font-size: 1.1rem; font-weight: 800; display: flex; gap: 8px; align-items: center; }
+  .tips ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .tips li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: .96rem; color: var(--ink-soft); }
+  .tips li .ic { font-size: 1.1rem; }
+  .tips li b { color: var(--ink); font-weight: 700; }
+
+  footer.foot {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: .86rem;
+    line-height: 1.7;
+  }
+
+  /* ---------- TABS ---------- */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 5px;
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .tab-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--ink-soft);
+    font: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 9px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: background .18s, color .18s;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn[aria-selected="true"] {
+    background: var(--tangerine);
+    color: #fff;
+    box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--tangerine) 60%, transparent);
+  }
+  :root[data-theme="dark"] .tab-btn[aria-selected="true"] { color: #1A1714; }
+  @media (prefers-color-scheme: dark) {
+    .tab-btn[aria-selected="true"] { color: #1A1714; }
+  }
+  .tab-btn:focus-visible { outline: 2px solid var(--tangerine); outline-offset: 3px; }
+
+  .panel[hidden] { display: none; }
+
+  /* ---------- CHECKLIST ---------- */
+  .pack-intro {
+    margin: 4px 2px 20px;
+    color: var(--ink-soft);
+    font-size: .98rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    justify-content: space-between;
+  }
+  .pack-progress {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .95rem;
+  }
+  .pbar {
+    width: 120px; height: 8px;
+    border-radius: 999px;
+    background: var(--line);
+    overflow: hidden;
+  }
+  .pbar > i {
+    display: block; height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--emerald), var(--tangerine));
+    transition: width .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .reset-btn {
+    appearance: none;
+    border: 1px solid var(--line-strong);
+    background: var(--card);
+    color: var(--ink-soft);
+    font: inherit;
+    font-size: .85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .reset-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .reset-btn:focus-visible { outline: 2px solid var(--tangerine); outline-offset: 2px; }
+
+  .pack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 720px) {
+    .pack-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .pack-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 10px;
+    box-shadow: var(--shadow);
+    break-inside: avoid;
+  }
+  .pack-card h3 {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .pack-card ul { margin: 0; padding: 0; list-style: none; }
+
+  .check {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 11px 4px;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pack-card li:first-child .check { border-top: none; }
+  .check input {
+    position: absolute;
+    opacity: 0;
+    width: 1px; height: 1px;
+  }
+  .box {
+    flex: none;
+    width: 24px; height: 24px;
+    margin-top: 1px;
+    border-radius: 7px;
+    border: 2px solid var(--line-strong);
+    background: var(--paper-2);
+    display: grid;
+    place-items: center;
+    transition: background .15s, border-color .15s, transform .1s;
+  }
+  .box svg { width: 15px; height: 15px; opacity: 0; transform: scale(.5); transition: opacity .15s, transform .15s; }
+  .box svg path { stroke: #fff; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  :root[data-theme="dark"] .box svg path { stroke: #1A1714; }
+  @media (prefers-color-scheme: dark) { .box svg path { stroke: #1A1714; } }
+
+  .check .txt {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: var(--ink);
+    padding-top: 1px;
+  }
+  .check .txt small { display: block; color: var(--ink-faint); font-size: .85rem; font-weight: 500; margin-top: 1px; }
+
+  .check input:checked + .box {
+    background: var(--emerald);
+    border-color: var(--emerald);
+  }
+  .check input:checked + .box svg { opacity: 1; transform: scale(1); }
+  .check input:checked ~ .txt { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: var(--emerald-line); }
+  .check:active .box { transform: scale(.9); }
+  .check input:focus-visible + .box { outline: 2px solid var(--tangerine); outline-offset: 2px; }
+
+  @media (max-width: 460px) {
+    body { font-size: 16px; }
+    .stop { grid-template-columns: 46px 12px minmax(0, 1fr); }
+    .stop::before { left: 52px; }
+    .node { left: 52px; }
+    .info-row { grid-template-columns: 66px 1fr; }
+    .tabs { width: 100%; }
+    .tab-btn { flex: 1; justify-content: center; padding: 10px 8px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .day, .info-card, .tips { animation: rise .5s cubic-bezier(.2,.7,.3,1) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Family Trip · Jeju</p>
+    <h1>제주도 가족여행 일정표</h1>
+    <div class="meta">
+      <span>📅 <b>2026. 7. 12 (일) ~ 7. 14 (화)</b></span>
+      <span>👨‍👩‍👧‍👦 <b>성인 5명</b></span>
+    </div>
+    <div class="legend">
+      <span class="lbl">색상 안내 :</span>
+      <span class="chip fixed"><span class="dot"></span>🔒 확정 (예약 완료)</span>
+      <span class="chip flex"><span class="dot"></span>✏️ 변동 가능 (추천 · 조정 OK)</span>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="일정표 / 준비물 전환">
+      <button class="tab-btn" role="tab" id="tab-plan" aria-controls="panel-plan" aria-selected="true">🗓️ 일정표</button>
+      <button class="tab-btn" role="tab" id="tab-pack" aria-controls="panel-pack" aria-selected="false">🧳 준비물</button>
+    </div>
+  </header>
+
+  <!-- ============ 일정표 패널 ============ -->
+  <section class="panel" id="panel-plan" role="tabpanel" aria-labelledby="tab-plan">
+
+  <!-- ===== 예약 요약 ===== -->
+  <div class="section-title">
+    <h2>예약 정보</h2>
+    <span class="tick"></span>
+  </div>
+
+  <div class="summary">
+    <div class="info-card">
+      <h3><span class="ic">✈️</span> 항공편</h3>
+      <div class="info-row">
+        <span class="k">가는 편</span>
+        <span class="v">7/12 · 제주항공 <span class="flight-no">7C185</span><br>김포 <span class="time">08:50</span> → 제주 <span class="time">10:05</span></span>
+      </div>
+      <div class="info-row">
+        <span class="k">오는 편</span>
+        <span class="v">7/14 · 제주항공 <span class="flight-no">7C156</span><br>제주 <span class="time">15:55</span> → 김포 <span class="time">17:10</span></span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3><span class="ic">🚗</span> 렌터카</h3>
+      <div class="info-row">
+        <span class="k">픽업</span>
+        <span class="v">7/12 · 제주공항 셔틀 탑승장</span>
+      </div>
+      <div class="info-row">
+        <span class="k">반납</span>
+        <span class="v">7/14 · 출발 2시간 전 권장<br>(<span class="time">13:55</span>쯤 반납 목표)</span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3><span class="ic">🏨</span> 숙소 · 1박</h3>
+      <div class="info-row">
+        <span class="k">이름</span>
+        <span class="v"><span class="stay-name">하도온담</span></span>
+      </div>
+      <div class="info-row">
+        <span class="k">주소</span>
+        <span class="v">제주시 구좌읍 일주동로 3430-126<br><span style="color:var(--ink-faint);font-size:.86rem">동쪽 · 하도/구좌</span></span>
+      </div>
+      <div class="info-row">
+        <span class="k">체크</span>
+        <span class="v">IN <span class="time">7/12 15:00</span> · OUT <span class="time">7/13 11:00</span><br><a class="maplink" href="https://map.kakao.com/?q=하도온담" target="_blank" rel="noopener">🗺️ 지도에서 열기</a></span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3><span class="ic">🏨</span> 숙소 · 2박</h3>
+      <div class="info-row">
+        <span class="k">이름</span>
+        <span class="v"><span class="stay-name">야크마을제주</span></span>
+      </div>
+      <div class="info-row">
+        <span class="k">주소</span>
+        <span class="v">서귀포시 색달중앙로 162<br><span style="color:var(--ink-faint);font-size:.86rem">남쪽 · 중문/색달</span></span>
+      </div>
+      <div class="info-row">
+        <span class="k">체크</span>
+        <span class="v">IN <span class="time">7/13 15:00</span> · OUT <span class="time">7/14 11:00</span><br><a class="maplink" href="https://map.kakao.com/?q=야크마을제주" target="_blank" rel="noopener">🗺️ 지도에서 열기</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 1 ===== -->
+  <div class="section-title">
+    <h2>하루별 일정</h2>
+    <span class="tick"></span>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <div>
+        <div class="daynum">Day 1</div>
+        <div class="date">7. 12 (일)</div>
+      </div>
+      <div class="region"><span class="pin">📍</span> 동쪽 · 함덕 → 성산</div>
+    </div>
+    <div class="timeline">
+
+      <div class="stop fixed move">
+        <div class="time-col">10:05</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">이동</div>
+            <div class="place">제주공항 도착 → 렌터카 수령 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">셔틀 탑승장에서 렌터카 픽업 후 동쪽으로 출발.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">11:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍜 점심</div>
+            <div class="place">도도리고기국수 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주식 고기국수로 든든한 첫 끼.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=도도리고기국수" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">13:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">☕ 카페</div>
+            <div class="place">뎔문도 · 함덕 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">함덕 바다 근처에서 잠시 쉬어가기.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=함덕 뎔문도" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">14:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🏨 숙소</div>
+            <div class="place">하도온담 체크인 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">짐을 풀고 가볍게 정비.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=하도온담" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">15:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🥾 오름 · 산책</div>
+            <div class="place">아부오름 (선택) <span class="status-tag flex">변동</span></div>
+            <p class="desc">아빠 하이킹 코스로 추천 — 정상까지 <b>5~10분</b>, 제주에서 가장 완만해 부모님도 부담 없어요. 성산일출봉 등정이 힘드시면 여기로 대체해도 좋아요. <span class="rain">☔ 소나기 시 생략</span>.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=아부오름" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">15:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">📸 관광</div>
+            <div class="place">스냅사진 · 제주동쪽사진관 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">가족 스냅 촬영으로 여행 기록 남기기.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주동쪽사진관" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">16:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">⛰️ 관광</div>
+            <div class="place">성산일출봉 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주 대표 명소. 정상 등정은 계단 오르막(왕복 40~50분) — 부담되면 아래에서 조망만 해도 충분해요.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=성산일출봉" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">18:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🥩 저녁</div>
+            <div class="place">제주본연 흑돼지 · 성산본점 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주 흑돼지로 든든하게. 성수기 웨이팅 대비 조금 일찍 도착 추천.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주본연 성산본점" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">19:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🌅 관광 · 카페</div>
+            <div class="place">섭지코지 · 프린츠성산 · 월간레코드 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">섭지코지 해안 산책(완만해 부모님도 편해요) 후 근처 카페에서 마무리.</p>
+            <div class="stop-links">
+              <a class="maplink" href="https://map.kakao.com/?q=섭지코지" target="_blank" rel="noopener">🗺️ 섭지코지</a>
+              <a class="maplink" href="https://map.kakao.com/?q=프린츠성산" target="_blank" rel="noopener">🗺️ 프린츠성산</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 2 ===== -->
+  <div class="day">
+    <div class="day-head">
+      <div>
+        <div class="daynum">Day 2</div>
+        <div class="date">7. 13 (월)</div>
+      </div>
+      <div class="region"><span class="pin">📍</span> 동 → 남 · 하도 → 서귀포/중문</div>
+    </div>
+    <div class="timeline">
+
+      <div class="stop flex">
+        <div class="time-col">08:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🥐 조식</div>
+            <div class="place">세화·하도 근처 아침 <span class="status-tag flex">변동</span></div>
+            <p class="desc">숙소에서 나와 세화해변 근처 브런치 카페 또는 간단한 아침. <b>추천</b> — 세화 바다 보며 여유롭게 시작.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=세화해변 카페" target="_blank" rel="noopener">🗺️ 세화 근처</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">10:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🌊 관광</div>
+            <div class="place">큰엉해안경승지 <span class="status-tag flex">변동</span></div>
+            <p class="desc">남원 해안 절벽을 따라 <b>평지 산책로</b>가 이어져 부모님과 걷기 딱 좋아요. 하도에서 서귀포로 내려오는 길목. <span class="rain">☔ 비 오면</span> 카멜리아힐(실내 온실) 대체.</p>
+            <div class="stop-links">
+              <a class="maplink" href="https://map.kakao.com/?q=큰엉해안경승지" target="_blank" rel="noopener">🗺️ 큰엉</a>
+              <a class="maplink" href="https://map.kakao.com/?q=카멜리아힐" target="_blank" rel="noopener">🗺️ 카멜리아힐(대안)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">12:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍽️ 점심</div>
+            <div class="place">네거리식당 (갈치) <span class="status-tag flex">변동</span></div>
+            <p class="desc">서귀포 갈치조림·구이 노포로 가족 손님이 많아요. <b>추천</b> — 근고기 흑돼지를 원하시면 서귀포 흑돼지집도 좋아요.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=서귀포 네거리식당" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">14:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">💧 관광</div>
+            <div class="place">천지연폭포 <span class="status-tag flex">변동</span></div>
+            <p class="desc">입구에서 폭포까지 <b>평지 산책로(왕복 30분)</b> — 부모님께 가장 편한 코스. 정방폭포로 바꿔도 좋아요.</p>
+            <div class="stop-links">
+              <a class="maplink" href="https://map.kakao.com/?q=천지연폭포" target="_blank" rel="noopener">🗺️ 천지연</a>
+              <a class="maplink" href="https://map.kakao.com/?q=정방폭포" target="_blank" rel="noopener">🗺️ 정방폭포(대안)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">15:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🏨 숙소</div>
+            <div class="place">야크마을제주 체크인 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">중문/색달 숙소 체크인. 짐 풀고 잠시 휴식.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=야크마을제주" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">16:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">☕ 카페</div>
+            <div class="place">중문 바다뷰 카페 <span class="status-tag flex">변동</span></div>
+            <p class="desc">숙소 근처 중문색달해변·대포주상절리 조망 카페에서 노을 전 티타임. <b>추천</b> — 대포주상절리 산책도 데크길이라 편해요.</p>
+            <div class="stop-links">
+              <a class="maplink" href="https://map.kakao.com/?q=중문색달해변" target="_blank" rel="noopener">🗺️ 중문색달해변</a>
+              <a class="maplink" href="https://map.kakao.com/?q=대포주상절리" target="_blank" rel="noopener">🗺️ 대포주상절리</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">18:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🐟 저녁</div>
+            <div class="place">제주오성 순살갈치조림 · 중문본점 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">가시 없는 순살 갈치조림으로 편하게. 부모님께 부담 없는 메뉴.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주오성 순살갈치조림 중문" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">20:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🛌 휴식</div>
+            <div class="place">숙소 휴식 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">둘째 날 마무리, 편히 쉬기.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DAY 3 ===== -->
+  <div class="day">
+    <div class="day-head">
+      <div>
+        <div class="daynum">Day 3</div>
+        <div class="date">7. 14 (화)</div>
+      </div>
+      <div class="region"><span class="pin">📍</span> 중문 → 공항 · 오후 출발</div>
+    </div>
+    <div class="timeline">
+
+      <div class="stop flex">
+        <div class="time-col">09:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍳 조식</div>
+            <div class="place">중문·색달 근처 아침 <span class="status-tag flex">변동</span></div>
+            <p class="desc">숙소 조식 또는 근처 카페. 체크아웃 전 여유롭게.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">11:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🧳 숙소</div>
+            <div class="place">체크아웃 · 짐 정리 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">11:00 체크아웃 후 공항 방향으로 이동 시작.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
+        <div class="time-col">11:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🎁 관광 · 기념품</div>
+            <div class="place">공항 가는 길 · 기념품 <span class="status-tag flex">변동</span></div>
+            <p class="desc">중문 → 공항 경로에 잠깐 들르기. <b>추천</b> — 무리한 이동 없이 기념품 쇼핑(제주 특산품·감귤·오메기떡) 위주로. 시간 여유 있으면 이동 중 짧은 명소 하나.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주 기념품 특산품" target="_blank" rel="noopener">🗺️ 근처 찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">13:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍚 점심</div>
+            <div class="place">이춘옥원조고등어쌈밥 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주 마지막 식사 — 고등어쌈밥으로 든든하게.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=이춘옥원조고등어쌈밥" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed move">
+        <div class="time-col">14:30</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🚗 이동</div>
+            <div class="place">렌터카 반납 → 제주공항 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">출발 2시간 전 반납 권장. 반납 후 공항 이동.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed move">
+        <div class="time-col">15:55</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">✈️ 이동</div>
+            <div class="place">제주 출발 → 김포 도착 17:10 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주항공 7C156. 즐거운 여행 마무리 🍊</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== TIPS ===== -->
+  <div class="tips">
+    <h3>🌴 7월 여름 여행 꿀팁</h3>
+    <ul>
+      <li><span class="ic">☔</span><span><b>장마 끝물</b> — 7월 중순은 짧고 강한 소나기가 올 수 있어요. 경량 우비·우산을 챙기고, 비 오면 위 <span style="color:var(--amber);font-weight:700">변동</span> 일정을 실내(카멜리아힐 온실·카페·미술관)로 바꾸면 됩니다.</span></li>
+      <li><span class="ic">☀️</span><span><b>더위·햇볕</b> — 오름·야외는 오전이나 해질 무렵에. 물·모자·선크림 필수, 한낮은 실내·식사·카페로 쉬어가요.</span></li>
+      <li><span class="ic">🕘</span><span><b>성수기 혼잡</b> — 유명 맛집은 웨이팅이 있어요. 식사 시간을 조금 비끼거나 조금 일찍 도착하면 편해요.</span></li>
+      <li><span class="ic">🥾</span><span><b>부모님 배려</b> — 아부오름·천지연폭포·큰엉 해안길·섭지코지는 모두 완만해 무리 없어요. 성산일출봉 정상만 계단이 있으니 컨디션 보며 선택.</span></li>
+    </ul>
+  </div>
+
+  </section><!-- /panel-plan -->
+
+  <!-- ============ 준비물 패널 ============ -->
+  <section class="panel" id="panel-pack" role="tabpanel" aria-labelledby="tab-pack" hidden>
+
+    <div class="section-title">
+      <h2>준비물 체크리스트</h2>
+      <span class="tick"></span>
+    </div>
+
+    <div class="pack-intro">
+      <span>✅ 항목을 누르면 체크돼요. 체크 상태는 이 기기에 저장돼 다시 열어도 유지됩니다.</span>
+      <span class="pack-progress">
+        <span class="pbar"><i id="pbar-fill"></i></span>
+        <span id="pack-count">0 / 0</span>
+        <button type="button" class="reset-btn" id="pack-reset">전체 해제</button>
+      </span>
+    </div>
+
+    <div class="pack-grid" id="pack-grid">
+
+      <div class="pack-card">
+        <h3>📄 필수 · 증명</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">신분증 (주민등록증/운전면허증)<small>탑승·렌터카 수령 시 필수</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">운전면허증 (실물)<small>렌터카 운전자 전원</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">항공권 / 예약 확인 (모바일)<small>제주항공 7C185 · 7C156</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">숙소 예약 확인서<small>하도온담 · 야크마을제주</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">렌터카 예약 바우처</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">지갑 · 현금 · 카드</span></label></li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <h3>🔌 전자기기</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">휴대폰 충전기 (인원별)</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">보조배터리<small>기내 반입 · 위탁수하물 금지</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">차량용 충전기 · 거치대<small>내비게이션용</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">카메라 · 셀카봉</span></label></li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <h3>☀️ 여름 · 날씨 대비</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">선크림 · 선글라스 · 모자</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">경량 우산 · 우비<small>7월 소나기 대비</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">모기·벌레 기피제</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">휴대용 선풍기 · 쿨토시</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">얇은 겉옷<small>실내 냉방·오름 바람 대비</small></span></label></li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <h3>👕 의류 · 신발</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">2박 3일 갈아입을 옷</span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">편한 운동화<small>오름·산책용 (아부오름 등)</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">샌들 · 슬리퍼<small>해변·숙소용</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">잠옷 · 속옷 · 양말</span></label></li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <h3>💊 세면 · 상비약</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">세면도구 · 화장품<small>숙소 비치 여부 확인</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">부모님 복용약<small>2박 3일치 넉넉히</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">상비약<small>소화제·두통약·밴드·멀미약</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">마스크 · 물티슈 · 손소독제</span></label></li>
+        </ul>
+      </div>
+
+      <div class="pack-card">
+        <h3>🎒 있으면 좋은 것</h3>
+        <ul>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">에코백 · 장바구니<small>기념품·마트 장보기용</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">간식 · 물<small>이동 중 요기</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">지퍼백 · 여분 비닐봉투<small>젖은 옷·쓰레기용</small></span></label></li>
+          <li><label class="check"><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="txt">수영복 · 방수팩<small>협재·중문 해변 물놀이 시</small></span></label></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section><!-- /panel-pack -->
+
+  <footer class="foot">
+    🔒 확정 = 예약 완료 · ✏️ 변동 = 함께 조정 가능<br>
+    장소를 누르면 카카오맵으로 길찾기가 열려요 · 즐거운 제주 여행 되세요! 🧡
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 탭 전환 ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab-btn"));
+  function selectTab(btn) {
+    tabs.forEach(function (t) {
+      var selected = t === btn;
+      t.setAttribute("aria-selected", selected ? "true" : "false");
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) panel.hidden = !selected;
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  tabs.forEach(function (btn) {
+    btn.addEventListener("click", function () { selectTab(btn); });
+  });
+
+  /* ---------- 체크리스트 저장 (localStorage) ---------- */
+  var STORE_KEY = "jeju-pack-2026";
+  var boxes = Array.prototype.slice.call(
+    document.querySelectorAll("#pack-grid input[type=checkbox]")
+  );
+  var countEl = document.getElementById("pack-count");
+  var fillEl = document.getElementById("pbar-fill");
+
+  // 각 체크박스에 안정적인 인덱스 부여
+  boxes.forEach(function (b, i) { b.dataset.idx = i; });
+
+  function load() {
+    var saved = [];
+    try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || "[]"); }
+    catch (e) { saved = []; }
+    boxes.forEach(function (b, i) { b.checked = saved.indexOf(i) !== -1; });
+  }
+  function save() {
+    var checkedIdx = boxes.filter(function (b) { return b.checked; })
+      .map(function (b) { return Number(b.dataset.idx); });
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(checkedIdx)); } catch (e) {}
+  }
+  function updateProgress() {
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    var total = boxes.length;
+    if (countEl) countEl.textContent = done + " / " + total;
+    if (fillEl) fillEl.style.width = total ? (done / total * 100) + "%" : "0%";
+  }
+
+  boxes.forEach(function (b) {
+    b.addEventListener("change", function () { save(); updateProgress(); });
+  });
+
+  var resetBtn = document.getElementById("pack-reset");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      boxes.forEach(function (b) { b.checked = false; });
+      save(); updateProgress();
+    });
+  }
+
+  load();
+  updateProgress();
+})();
+</script>
+
+</body>
+</html>
