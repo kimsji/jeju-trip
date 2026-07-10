@@ -22,12 +22,14 @@
 
     --tangerine: #E0691F;
     --tangerine-soft: #FBEADB;
-    --emerald: #0E7C63;
-    --emerald-soft: #DCEFE8;
-    --emerald-line: #A9D6C7;
-    --amber: #B07B2E;
-    --amber-soft: #F6ECD8;
-    --amber-line: #E4CE9E;
+    /* 확정 = 빨강 */
+    --emerald: #D23B3B;
+    --emerald-soft: #FBE4E2;
+    --emerald-line: #F0BDB8;
+    /* 미확정(자유일정) = 파랑 */
+    --amber: #2F6FD6;
+    --amber-soft: #E2ECFB;
+    --amber-line: #B9D0F2;
 
     --shadow: 0 1px 2px rgba(42,38,34,.05), 0 6px 20px -12px rgba(42,38,34,.18);
 
@@ -48,12 +50,14 @@
 
       --tangerine: #F08A44;
       --tangerine-soft: #3A2A1B;
-      --emerald: #4FBFA0;
-      --emerald-soft: #172C27;
-      --emerald-line: #2E5449;
-      --amber: #D9AE63;
-      --amber-soft: #2E2617;
-      --amber-line: #4A3C22;
+      /* 확정 = 빨강 (다크) */
+      --emerald: #F07A72;
+      --emerald-soft: #331C1B;
+      --emerald-line: #5A302C;
+      /* 미확정(자유일정) = 파랑 (다크) */
+      --amber: #6BA3F0;
+      --amber-soft: #17233A;
+      --amber-line: #2C4267;
 
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.6);
     }
@@ -63,8 +67,8 @@
     --ink: #2A2622; --ink-soft: #6B6258; --ink-faint: #938A7E;
     --line: #E7DFD2; --line-strong: #D8CDBB;
     --tangerine: #E0691F; --tangerine-soft: #FBEADB;
-    --emerald: #0E7C63; --emerald-soft: #DCEFE8; --emerald-line: #A9D6C7;
-    --amber: #B07B2E; --amber-soft: #F6ECD8; --amber-line: #E4CE9E;
+    --emerald: #D23B3B; --emerald-soft: #FBE4E2; --emerald-line: #F0BDB8;
+    --amber: #2F6FD6; --amber-soft: #E2ECFB; --amber-line: #B9D0F2;
     --shadow: 0 1px 2px rgba(42,38,34,.05), 0 6px 20px -12px rgba(42,38,34,.18);
   }
   :root[data-theme="dark"] {
@@ -72,8 +76,8 @@
     --ink: #F0E9DE; --ink-soft: #B7AD9F; --ink-faint: #8A8175;
     --line: #35302A; --line-strong: #443E36;
     --tangerine: #F08A44; --tangerine-soft: #3A2A1B;
-    --emerald: #4FBFA0; --emerald-soft: #172C27; --emerald-line: #2E5449;
-    --amber: #D9AE63; --amber-soft: #2E2617; --amber-line: #4A3C22;
+    --emerald: #F07A72; --emerald-soft: #331C1B; --emerald-line: #5A302C;
+    --amber: #6BA3F0; --amber-soft: #17233A; --amber-line: #2C4267;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.6);
   }
 
@@ -598,8 +602,8 @@
     </div>
     <div class="legend">
       <span class="lbl">색상 안내 :</span>
-      <span class="chip fixed"><span class="dot"></span>🔒 확정 (예약 완료)</span>
-      <span class="chip flex"><span class="dot"></span>✏️ 변동 가능 (추천 · 조정 OK)</span>
+      <span class="chip fixed"><span class="dot"></span>🔴 확정 (예약 완료)</span>
+      <span class="chip flex"><span class="dot"></span>🔵 자유일정 (미확정 · 조정 OK)</span>
     </div>
 
     <div class="tabs" role="tablist" aria-label="일정표 / 준비물 전환">
@@ -638,7 +642,7 @@
       </div>
       <div class="info-row">
         <span class="k">반납</span>
-        <span class="v">7/14 · 출발 2시간 전 권장<br>(<span class="time">13:55</span>쯤 반납 목표)</span>
+        <span class="v">7/14 · 출발 약 2시간 전<br>(<span class="time">14:00</span>쯤 반납 목표)</span>
       </div>
     </div>
 
@@ -692,10 +696,21 @@
     <div class="timeline">
 
       <div class="stop fixed move">
+        <div class="time-col">08:50</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">✈️ 이동</div>
+            <div class="place">김포공항 출발 <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주항공 7C185 · 김포 08:50 출발.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed move">
         <div class="time-col">10:05</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">이동</div>
+            <div class="kind">🚗 이동</div>
             <div class="place">제주공항 도착 → 렌터카 수령 <span class="status-tag fixed">확정</span></div>
             <p class="desc">셔틀 탑승장에서 렌터카 픽업 후 동쪽으로 출발.</p>
           </div>
@@ -708,32 +723,20 @@
           <div class="card-stop">
             <div class="kind">🍜 점심</div>
             <div class="place">도도리고기국수 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">제주식 고기국수로 든든한 첫 끼.</p>
+            <p class="desc">제주식 고기국수로 든든한 첫 끼. <b>12시 반쯤 이동</b> 예정.</p>
             <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=도도리고기국수" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
 
-      <div class="stop fixed">
-        <div class="time-col">13:00</div><div class="rail"></div><span class="node"></span>
+      <div class="stop flex">
+        <div class="time-col">13:30</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">☕ 카페</div>
-            <div class="place">뎔문도 · 함덕 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">함덕 바다 근처에서 잠시 쉬어가기.</p>
+            <div class="place">뎔문도 · 함덕 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">함덕 바다 근처에서 잠시 쉬어가기. <b>14시 반쯤 이동</b>.</p>
             <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=함덕 뎔문도" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="stop fixed">
-        <div class="time-col">14:30</div><div class="rail"></div><span class="node"></span>
-        <div class="body">
-          <div class="card-stop">
-            <div class="kind">🏨 숙소</div>
-            <div class="place">하도온담 체크인 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">짐을 풀고 가볍게 정비.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=하도온담" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
@@ -742,34 +745,22 @@
         <div class="time-col">15:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🥾 오름 · 산책</div>
-            <div class="place">아부오름 (선택) <span class="status-tag flex">변동</span></div>
-            <p class="desc">아빠 하이킹 코스로 추천 — 정상까지 <b>5~10분</b>, 제주에서 가장 완만해 부모님도 부담 없어요. 성산일출봉 등정이 힘드시면 여기로 대체해도 좋아요. <span class="rain">☔ 소나기 시 생략</span>.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=아부오름" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+            <div class="kind">🏨 숙소</div>
+            <div class="place">숙소 체크인 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">하도온담 체크인 · 짐 풀고 정비.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=하도온담" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
 
-      <div class="stop fixed">
-        <div class="time-col">15:30</div><div class="rail"></div><span class="node"></span>
+      <div class="stop flex">
+        <div class="time-col">16:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">📸 관광</div>
-            <div class="place">스냅사진 · 제주동쪽사진관 <span class="status-tag fixed">확정</span></div>
+            <div class="place">제주동쪽사진관 (스냅사진) <span class="status-tag flex">자유일정</span></div>
             <p class="desc">가족 스냅 촬영으로 여행 기록 남기기.</p>
             <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주동쪽사진관" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="stop fixed">
-        <div class="time-col">16:30</div><div class="rail"></div><span class="node"></span>
-        <div class="body">
-          <div class="card-stop">
-            <div class="kind">⛰️ 관광</div>
-            <div class="place">성산일출봉 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">제주 대표 명소. 정상 등정은 계단 오르막(왕복 40~50분) — 부담되면 아래에서 조망만 해도 충분해요.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=성산일출봉" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
@@ -786,15 +777,16 @@
         </div>
       </div>
 
-      <div class="stop fixed">
-        <div class="time-col">19:30</div><div class="rail"></div><span class="node"></span>
+      <div class="stop flex">
+        <div class="time-col">저녁</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">🌅 관광 · 카페</div>
-            <div class="place">섭지코지 · 프린츠성산 · 월간레코드 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">섭지코지 해안 산책(완만해 부모님도 편해요) 후 근처 카페에서 마무리.</p>
+            <div class="place">섭지코지 · 성산일출봉 · 프린츠성산 · 월간레코드 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">섭지코지 해안 산책(완만해 부모님도 편해요)과 근처 카페. 성산일출봉은 컨디션 보며 조망 또는 등정.</p>
             <div class="stop-links">
               <a class="maplink" href="https://map.kakao.com/?q=섭지코지" target="_blank" rel="noopener">🗺️ 섭지코지</a>
+              <a class="maplink" href="https://map.kakao.com/?q=성산일출봉" target="_blank" rel="noopener">🗺️ 성산일출봉</a>
               <a class="maplink" href="https://map.kakao.com/?q=프린츠성산" target="_blank" rel="noopener">🗺️ 프린츠성산</a>
             </div>
           </div>
@@ -811,59 +803,58 @@
         <div class="daynum">Day 2</div>
         <div class="date">7. 13 (월)</div>
       </div>
-      <div class="region"><span class="pin">📍</span> 동 → 남 · 하도 → 서귀포/중문</div>
+      <div class="region"><span class="pin">📍</span> 동 → 남 · 용눈이오름 → 산방산 → 중문</div>
     </div>
     <div class="timeline">
 
       <div class="stop flex">
-        <div class="time-col">08:30</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">08:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🥐 조식</div>
-            <div class="place">세화·하도 근처 아침 <span class="status-tag flex">변동</span></div>
-            <p class="desc">숙소에서 나와 세화해변 근처 브런치 카페 또는 간단한 아침. <b>추천</b> — 세화 바다 보며 여유롭게 시작.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=세화해변 카페" target="_blank" rel="noopener">🗺️ 세화 근처</a></div>
+            <div class="kind">🥐 아침식사</div>
+            <div class="place">아침식사 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">숙소 조식 또는 근처 카페에서 여유롭게 시작.</p>
           </div>
         </div>
       </div>
 
       <div class="stop flex">
-        <div class="time-col">10:30</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">10:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🌊 관광</div>
-            <div class="place">큰엉해안경승지 <span class="status-tag flex">변동</span></div>
-            <p class="desc">남원 해안 절벽을 따라 <b>평지 산책로</b>가 이어져 부모님과 걷기 딱 좋아요. 하도에서 서귀포로 내려오는 길목. <span class="rain">☔ 비 오면</span> 카멜리아힐(실내 온실) 대체.</p>
+            <div class="kind">🥾 관광 · 오름</div>
+            <div class="place">용눈이오름 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">완만한 능선이 아름다운 오름 — <b>정상까지 15~20분</b> 정도라 부모님도 부담 없어요. <span class="rain">☔ 비 오면</span> 실내(카페·미술관)로 대체.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=용눈이오름" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop fixed">
+        <div class="time-col">12:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍽️ 점심</div>
+            <div class="place">제주오성 (갈치조림) <span class="status-tag fixed">확정</span></div>
+            <p class="desc">가시 없는 순살 갈치조림으로 편하게. 근처 <b>소랑아시(소품샵)</b> 구경도 함께.</p>
             <div class="stop-links">
-              <a class="maplink" href="https://map.kakao.com/?q=큰엉해안경승지" target="_blank" rel="noopener">🗺️ 큰엉</a>
-              <a class="maplink" href="https://map.kakao.com/?q=카멜리아힐" target="_blank" rel="noopener">🗺️ 카멜리아힐(대안)</a>
+              <a class="maplink" href="https://map.kakao.com/?q=제주오성 갈치조림" target="_blank" rel="noopener">🗺️ 제주오성</a>
+              <a class="maplink" href="https://map.kakao.com/?q=소랑아시 소품샵" target="_blank" rel="noopener">🗺️ 소랑아시</a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="stop flex">
-        <div class="time-col">12:30</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">13:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🍽️ 점심</div>
-            <div class="place">네거리식당 (갈치) <span class="status-tag flex">변동</span></div>
-            <p class="desc">서귀포 갈치조림·구이 노포로 가족 손님이 많아요. <b>추천</b> — 근고기 흑돼지를 원하시면 서귀포 흑돼지집도 좋아요.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=서귀포 네거리식당" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="stop flex">
-        <div class="time-col">14:00</div><div class="rail"></div><span class="node"></span>
-        <div class="body">
-          <div class="card-stop">
-            <div class="kind">💧 관광</div>
-            <div class="place">천지연폭포 <span class="status-tag flex">변동</span></div>
-            <p class="desc">입구에서 폭포까지 <b>평지 산책로(왕복 30분)</b> — 부모님께 가장 편한 코스. 정방폭포로 바꿔도 좋아요.</p>
+            <div class="kind">☕ 카페 · 관광</div>
+            <div class="place">산방산 · 용머리해안 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">산방산 아래 용머리해안 산책과 바다뷰 카페. 파도·물때에 따라 용머리해안 탐방로가 통제될 수 있어요.</p>
             <div class="stop-links">
-              <a class="maplink" href="https://map.kakao.com/?q=천지연폭포" target="_blank" rel="noopener">🗺️ 천지연</a>
-              <a class="maplink" href="https://map.kakao.com/?q=정방폭포" target="_blank" rel="noopener">🗺️ 정방폭포(대안)</a>
+              <a class="maplink" href="https://map.kakao.com/?q=산방산" target="_blank" rel="noopener">🗺️ 산방산</a>
+              <a class="maplink" href="https://map.kakao.com/?q=용머리해안" target="_blank" rel="noopener">🗺️ 용머리해안</a>
             </div>
           </div>
         </div>
@@ -882,38 +873,34 @@
       </div>
 
       <div class="stop flex">
-        <div class="time-col">16:00</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">17:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">☕ 카페</div>
-            <div class="place">중문 바다뷰 카페 <span class="status-tag flex">변동</span></div>
-            <p class="desc">숙소 근처 중문색달해변·대포주상절리 조망 카페에서 노을 전 티타임. <b>추천</b> — 대포주상절리 산책도 데크길이라 편해요.</p>
-            <div class="stop-links">
-              <a class="maplink" href="https://map.kakao.com/?q=중문색달해변" target="_blank" rel="noopener">🗺️ 중문색달해변</a>
-              <a class="maplink" href="https://map.kakao.com/?q=대포주상절리" target="_blank" rel="noopener">🗺️ 대포주상절리</a>
-            </div>
+            <div class="kind">🏊 자유시간</div>
+            <div class="place">수영 · 자유시간 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">숙소 수영장 또는 근처에서 각자 편하게 쉬는 시간.</p>
           </div>
         </div>
       </div>
 
-      <div class="stop fixed">
+      <div class="stop flex">
         <div class="time-col">18:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🐟 저녁</div>
-            <div class="place">제주오성 순살갈치조림 · 중문본점 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">가시 없는 순살 갈치조림으로 편하게. 부모님께 부담 없는 메뉴.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주오성 순살갈치조림 중문" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+            <div class="kind">🍢 저녁 · 관광</div>
+            <div class="place">올레시장 구경 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">서귀포 매일올레시장에서 저녁 겸 먹거리·간식 구경. 회·전복·꼬치 등 다양해요.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=서귀포 매일올레시장" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
 
-      <div class="stop fixed">
+      <div class="stop flex">
         <div class="time-col">20:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">🛌 휴식</div>
-            <div class="place">숙소 휴식 <span class="status-tag fixed">확정</span></div>
+            <div class="place">숙소 휴식 <span class="status-tag flex">자유일정</span></div>
             <p class="desc">둘째 날 마무리, 편히 쉬기.</p>
           </div>
         </div>
@@ -929,63 +916,78 @@
         <div class="daynum">Day 3</div>
         <div class="date">7. 14 (화)</div>
       </div>
-      <div class="region"><span class="pin">📍</span> 중문 → 공항 · 오후 출발</div>
+      <div class="region"><span class="pin">📍</span> 서귀포 → 공항 · 오후 출발</div>
     </div>
     <div class="timeline">
 
       <div class="stop flex">
-        <div class="time-col">09:00</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">08:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">🍳 조식</div>
-            <div class="place">중문·색달 근처 아침 <span class="status-tag flex">변동</span></div>
+            <div class="place">조식 <span class="status-tag flex">자유일정</span></div>
             <p class="desc">숙소 조식 또는 근처 카페. 체크아웃 전 여유롭게.</p>
           </div>
         </div>
       </div>
 
-      <div class="stop fixed">
-        <div class="time-col">11:00</div><div class="rail"></div><span class="node"></span>
+      <div class="stop flex">
+        <div class="time-col">09:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">🧳 숙소</div>
-            <div class="place">체크아웃 · 짐 정리 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">11:00 체크아웃 후 공항 방향으로 이동 시작.</p>
+            <div class="place">체크아웃 · 짐 정리 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">체크아웃 후 공항 방향으로 이동 시작.</p>
           </div>
         </div>
       </div>
 
       <div class="stop flex">
-        <div class="time-col">11:30</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">10:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🎁 관광 · 기념품</div>
-            <div class="place">공항 가는 길 · 기념품 <span class="status-tag flex">변동</span></div>
-            <p class="desc">중문 → 공항 경로에 잠깐 들르기. <b>추천</b> — 무리한 이동 없이 기념품 쇼핑(제주 특산품·감귤·오메기떡) 위주로. 시간 여유 있으면 이동 중 짧은 명소 하나.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주 기념품 특산품" target="_blank" rel="noopener">🗺️ 근처 찾기</a></div>
+            <div class="kind">🌿 관광</div>
+            <div class="place">산방산 탄산온천 or 군산오름 / 영알해안산책로 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">컨디션 따라 택1 — <b>산방산 탄산온천</b>(휴식형) / <b>군산오름</b>(가벼운 오름·전망) / <b>영알(영아리) 해안산책로</b>(평지 산책). 공항 방향 동선에 맞춰 선택.</p>
+            <div class="stop-links">
+              <a class="maplink" href="https://map.kakao.com/?q=산방산 탄산온천" target="_blank" rel="noopener">🗺️ 산방산탄산온천</a>
+              <a class="maplink" href="https://map.kakao.com/?q=군산오름" target="_blank" rel="noopener">🗺️ 군산오름</a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="stop fixed">
+        <div class="time-col">12:00</div><div class="rail"></div><span class="node"></span>
+        <div class="body">
+          <div class="card-stop">
+            <div class="kind">🍙 점심</div>
+            <div class="place">제주도 김만복 (김밥) <span class="status-tag fixed">확정</span></div>
+            <p class="desc">제주 마지막 식사 — 김만복 김밥으로 든든하게. 포장해서 공항에서 먹어도 좋아요.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=제주도 김만복 김밥" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop flex">
         <div class="time-col">13:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
-            <div class="kind">🍚 점심</div>
-            <div class="place">이춘옥원조고등어쌈밥 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">제주 마지막 식사 — 고등어쌈밥으로 든든하게.</p>
-            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=이춘옥원조고등어쌈밥" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
+            <div class="kind">☕ 카페</div>
+            <div class="place">백다방베이커리 · 제주사수점 <span class="status-tag flex">자유일정</span></div>
+            <p class="desc">공항 가는 길에 잠깐 커피·디저트. 시간 여유 보며 들르기.</p>
+            <div class="stop-links"><a class="maplink" href="https://map.kakao.com/?q=백다방베이커리 제주사수점" target="_blank" rel="noopener">🗺️ 길찾기</a></div>
           </div>
         </div>
       </div>
 
       <div class="stop fixed move">
-        <div class="time-col">14:30</div><div class="rail"></div><span class="node"></span>
+        <div class="time-col">14:00</div><div class="rail"></div><span class="node"></span>
         <div class="body">
           <div class="card-stop">
             <div class="kind">🚗 이동</div>
             <div class="place">렌터카 반납 → 제주공항 <span class="status-tag fixed">확정</span></div>
-            <p class="desc">출발 2시간 전 반납 권장. 반납 후 공항 이동.</p>
+            <p class="desc">출발 약 2시간 전 반납. 반납 후 공항 이동.</p>
           </div>
         </div>
       </div>
@@ -1008,10 +1010,10 @@
   <div class="tips">
     <h3>🌴 7월 여름 여행 꿀팁</h3>
     <ul>
-      <li><span class="ic">☔</span><span><b>장마 끝물</b> — 7월 중순은 짧고 강한 소나기가 올 수 있어요. 경량 우비·우산을 챙기고, 비 오면 위 <span style="color:var(--amber);font-weight:700">변동</span> 일정을 실내(카멜리아힐 온실·카페·미술관)로 바꾸면 됩니다.</span></li>
+      <li><span class="ic">☔</span><span><b>장마 끝물</b> — 7월 중순은 짧고 강한 소나기가 올 수 있어요. 경량 우비·우산을 챙기고, 비 오면 위 <span style="color:var(--amber);font-weight:700">자유일정</span>을 실내(온천·카페·미술관)로 바꾸면 됩니다.</span></li>
       <li><span class="ic">☀️</span><span><b>더위·햇볕</b> — 오름·야외는 오전이나 해질 무렵에. 물·모자·선크림 필수, 한낮은 실내·식사·카페로 쉬어가요.</span></li>
       <li><span class="ic">🕘</span><span><b>성수기 혼잡</b> — 유명 맛집은 웨이팅이 있어요. 식사 시간을 조금 비끼거나 조금 일찍 도착하면 편해요.</span></li>
-      <li><span class="ic">🥾</span><span><b>부모님 배려</b> — 아부오름·천지연폭포·큰엉 해안길·섭지코지는 모두 완만해 무리 없어요. 성산일출봉 정상만 계단이 있으니 컨디션 보며 선택.</span></li>
+      <li><span class="ic">🥾</span><span><b>부모님 배려</b> — 용눈이오름·용머리해안·올레시장은 모두 완만해 무리 없어요. 오름은 컨디션 보며 오전에, 용머리해안은 물때에 따라 통제될 수 있어요.</span></li>
     </ul>
   </div>
 
@@ -1104,7 +1106,7 @@
   </section><!-- /panel-pack -->
 
   <footer class="foot">
-    🔒 확정 = 예약 완료 · ✏️ 변동 = 함께 조정 가능<br>
+    🔴 확정 = 예약 완료 · 🔵 자유일정 = 함께 조정 가능<br>
     장소를 누르면 카카오맵으로 길찾기가 열려요 · 즐거운 제주 여행 되세요! 🧡
   </footer>
 
